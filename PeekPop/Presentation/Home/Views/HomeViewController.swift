@@ -17,14 +17,43 @@ class HomeViewController: UIViewController {
     var viewModel: HomeViewModel
     var cancellables = Set<AnyCancellable>()
     
-    // MARK: - UIRelated instances
+    // MARK: - UI Related instances
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.showsVerticalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.delegate = self
         return tableView
+    }()
+    
+    lazy var footerContentView: UIView = {
+        let view: UIView = .init()
+        view.backgroundColor = .systemGroupedBackground
+        return view
+    }()
+    
+    lazy var footerStackView: UIStackView = {
+        let view: UIStackView = .init()
+        view.spacing = 2
+        view.alignment = .leading
+        view.axis = .vertical
+        view.distribution = .fill
+        return view
+    }()
+    
+    lazy var actionAddItem: UIButton = {
+        
+        var config = UIButton.Configuration.plain()
+        config.image = .init(systemName: "plus")!
+        
+        let view: UIButton = .init(configuration: config, primaryAction: UIAction() { _ in
+            
+        })
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = .scaleAspectFit
+        return view
     }()
     
     private lazy var tableViewDataSource: UITableViewDiffableDataSource<Sections, Recipe> = {
@@ -83,6 +112,8 @@ class HomeViewController: UIViewController {
     }
 }
 
+//MARK: Layout setup
+
 extension HomeViewController: ViewConstraintAutoLayoutSetup {
     
     func setUpViews() {
@@ -91,10 +122,24 @@ extension HomeViewController: ViewConstraintAutoLayoutSetup {
     
     func addSubViewsComponents() {
         view.addSubview(tableView)
+        
+        // setup footer view
+        footerStackView.addArrangedSubview(actionAddItem)
+        footerContentView.addSubview(footerStackView)
+        
+        view.addSubview(footerContentView)
     }
     
     func setUpConstraints() {
-        tableView.fillSuperview()
+        tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: footerContentView.topAnchor, trailing: view.trailingAnchor)
+        
+        footerStackView.anchor(top: footerContentView.topAnchor, leading: footerContentView.leadingAnchor, bottom: footerContentView.safeAreaLayoutGuide.bottomAnchor, trailing: footerContentView.trailingAnchor,
+                               padding: .init(top: 0, left: 16, bottom: 0, right: 16))
+        footerContentView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, size: .init(width: 0, height: 90))
+        
+        NSLayoutConstraint.activate([
+            actionAddItem.heightAnchor.constraint(equalToConstant: 30),
+            actionAddItem.widthAnchor.constraint(equalToConstant: 30),
+        ])
     }
 }
-
