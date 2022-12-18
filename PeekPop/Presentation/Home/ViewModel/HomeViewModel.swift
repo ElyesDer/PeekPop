@@ -9,4 +9,7 @@ import Foundation
 
 class HomeViewModel {
     var coordinator: Coordinator!
+    
+    @Published
+    var recipes: Recipes = []
 }

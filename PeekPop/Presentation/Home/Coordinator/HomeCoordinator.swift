@@ -25,11 +25,10 @@ class HomeCoordinator: Coordinator {
     }
     
     func goHomePage(){
-        let vc = Inject.ViewControllerHost(HomeViewController())
         let homeViewModel = HomeViewModel()
         homeViewModel.coordinator = self
-        vc.viewModel = homeViewModel
         
+        let vc = Inject.ViewControllerHost(HomeViewController(viewModel: homeViewModel))
         navigationController.pushViewController(vc, animated: true)
     }
     
