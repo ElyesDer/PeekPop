@@ -19,23 +19,40 @@ class RecetteDetailsViewCell: UITableViewCell {
         return label
     }()
     
-    lazy var tempLabel: UILabel = {
+    lazy var durationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var cloundImage: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFit
-        return imageView
+    lazy var noteSView: UIStackView = {
+        let view: UIStackView = .init()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.alignment = .center
+        view.axis = .horizontal
+        view.distribution = .fillEqually
+        return view
     }()
+    
+    lazy var emptyView: UIView = {
+        let view: UIView = .init(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    var starImageView: UIImageView {
+        let starImageView: UIImageView = .init(image: .init(systemName: "star.fill"))
+        starImageView.tintColor = .systemYellow
+        starImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return starImageView
+    }
     
     var content: Recipe!
     
-    func setup(with recette: Recipe) {
-        self.content = recette
+    func setup(with data: Recipe) {
+        self.content = data
+        selectionStyle = .none
         
         // setup image loading
         setUpViews()
@@ -45,13 +62,17 @@ class RecetteDetailsViewCell: UITableViewCell {
 
 extension RecetteDetailsViewCell: ViewConstraintAutoLayoutSetup {
     func setUpViews() {
-        //        nameLabel.text = self.content.countryName
-        //        tempLabel.text = self.content.temperature
-        //        cloundImage.image = self.content.clounds
+        nameLabel.text = content.name
+        durationLabel.text = "\(content.requiredTime) mn"
         
-        self.addSubview(nameLabel)
-        self.addSubview(tempLabel)
-        self.addSubview(cloundImage)
+        (1...content.note).forEach { _ in
+            noteSView.addArrangedSubview(starImageView)
+        }
+        noteSView.addArrangedSubview(emptyView)
+        
+        addSubview(nameLabel)
+        addSubview(durationLabel)
+        addSubview(noteSView)
     }
     
     func addSubViewsComponents() {
@@ -59,16 +80,17 @@ extension RecetteDetailsViewCell: ViewConstraintAutoLayoutSetup {
     }
     
     func setUpConstraints() {
-        nameLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: nil,
+        noteSView.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: nil,
                          padding: .init(top: 2, left: 8, bottom: 2, right: 0))
-        tempLabel.anchor(top: self.topAnchor, leading: nameLabel.trailingAnchor, bottom: self.bottomAnchor, trailing: nil)
-        cloundImage.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: self.trailingAnchor,
+        nameLabel.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: durationLabel.leadingAnchor)
+        
+        durationLabel.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: self.trailingAnchor,
                            padding: .init(top: 2, left: 0, bottom: 2, right: 8))
         
         NSLayoutConstraint.activate([
             nameLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5),
-            tempLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.3),
-            cloundImage.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.2)
+            durationLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.2),
+            noteSView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.3)
         ])
     }
 }

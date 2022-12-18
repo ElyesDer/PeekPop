@@ -23,7 +23,8 @@ class HomeViewController: UIViewController {
         let tableView = UITableView()
         tableView.showsVerticalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
+        tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        tableView.estimatedRowHeight = 44
         tableView.delegate = self
         return tableView
     }()
@@ -48,8 +49,8 @@ class HomeViewController: UIViewController {
         var config = UIButton.Configuration.plain()
         config.image = .init(systemName: "plus")!
         
-        let view: UIButton = .init(configuration: config, primaryAction: UIAction() { _ in
-            
+        let view: UIButton = .init(configuration: config, primaryAction: UIAction() { [weak self] _ in
+            self?.viewModel.randomAddRecipe()
         })
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
@@ -66,6 +67,10 @@ class HomeViewController: UIViewController {
         }
         return dataSource
     }()
+    
+//    if let recipe = self.viewModel.recipes.first(where: { $0.id == id }) {
+//        cell.setup(with: recette)
+//    }
     
     // MARK: - UIVC Lifecycle
     init(viewModel: HomeViewModel) {
@@ -94,7 +99,19 @@ class HomeViewController: UIViewController {
         viewModel.$recipes
             .receive(on: DispatchQueue.main)
             .sink { [weak self] recipes in
-                self?.configureInitialDiffableSnapshot()
+                guard let self = self else { return }
+                var snapshot = self.tableViewDataSource.snapshot()
+                
+                recipes.forEach { recipe in
+                    if let _ = snapshot.indexOfItem(recipe) {
+                        snapshot.reloadItems([recipe])
+                    } else {
+                        snapshot.appendItems([recipe])
+                    }
+                }
+                
+                // apply
+                self.tableViewDataSource.apply(snapshot)
             }
             .store(in: &cancellables)
     }
@@ -116,8 +133,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: ViewConstraintAutoLayoutSetup {
     
+    func setupTableView() {
+        tableView.register(RecetteDetailsViewCell.self, forCellReuseIdentifier: RecetteDetailsViewCell.identifier)
+    }
+    
     func setUpViews() {
-        
+        setupTableView()
+        configureInitialDiffableSnapshot()
     }
     
     func addSubViewsComponents() {
@@ -136,10 +158,14 @@ extension HomeViewController: ViewConstraintAutoLayoutSetup {
         footerStackView.anchor(top: footerContentView.topAnchor, leading: footerContentView.leadingAnchor, bottom: footerContentView.safeAreaLayoutGuide.bottomAnchor, trailing: footerContentView.trailingAnchor,
                                padding: .init(top: 0, left: 16, bottom: 0, right: 16))
         footerContentView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, size: .init(width: 0, height: 90))
-        
-        NSLayoutConstraint.activate([
-            actionAddItem.heightAnchor.constraint(equalToConstant: 30),
-            actionAddItem.widthAnchor.constraint(equalToConstant: 30),
-        ])
+    }
+}
+
+
+//MARK: Tableview setup
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        44
     }
 }
