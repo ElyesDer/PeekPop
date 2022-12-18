@@ -65,14 +65,22 @@ extension RecetteDetailsViewCell: ViewConstraintAutoLayoutSetup {
         nameLabel.text = content.name
         durationLabel.text = "\(content.requiredTime) mn"
         
-        (1...content.note).forEach { _ in
-            noteSView.addArrangedSubview(starImageView)
-        }
-        noteSView.addArrangedSubview(emptyView)
+        setupStarView(count: content.note)
         
         addSubview(nameLabel)
         addSubview(durationLabel)
         addSubview(noteSView)
+    }
+    
+    func setupStarView(count: Int) {
+        noteSView.subviews.forEach { view in
+            view.removeFromSuperview()
+        }
+        
+        (1...count).forEach { _ in
+            noteSView.addArrangedSubview(starImageView)
+        }
+        noteSView.addArrangedSubview(emptyView)
     }
     
     func addSubViewsComponents() {

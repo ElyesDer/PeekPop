@@ -68,10 +68,6 @@ class HomeViewController: UIViewController {
         return dataSource
     }()
     
-//    if let recipe = self.viewModel.recipes.first(where: { $0.id == id }) {
-//        cell.setup(with: recette)
-//    }
-    
     // MARK: - UIVC Lifecycle
     init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
@@ -162,7 +158,7 @@ extension HomeViewController: ViewConstraintAutoLayoutSetup {
 }
 
 
-//MARK: Tableview setup
+//MARK: - Tableview setup
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
