@@ -12,8 +12,11 @@ typealias Recipes = [Recipe]
 struct Recipe {
     var id: UUID = .init()
     var name: String
-    var requiredTime: Float
+    var requiredTime: String
     var note: Int
+    var ingredient: String
+    var preparation: String
+    var imageName: String
 }
 
 extension Recipe: Hashable {

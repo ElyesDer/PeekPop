@@ -21,14 +21,24 @@ class HomeCoordinator: Coordinator {
     
     func start() {
         print("Coordinator Start")
-        goHomePage()
+        redirectHomePage()
     }
     
-    func goHomePage(){
+    func redirectHomePage(){
         let homeViewModel = HomeViewModel()
         homeViewModel.coordinator = self
         
         let vc = Inject.ViewControllerHost(HomeViewController(viewModel: homeViewModel))
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func buildDetailsViewController(with recipe: Recipe) -> UIViewController {
+        let detailsViewModel: DetailsViewModel = .init(coordinator: self, recipe: recipe)
+        let vc = DetailsViewController(viewModel: detailsViewModel)
+        return vc
+    }
+    
+    func redirectDetailsPage(vc: UIViewController) {
         navigationController.pushViewController(vc, animated: true)
     }
     

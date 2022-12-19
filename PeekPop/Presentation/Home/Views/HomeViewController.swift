@@ -164,4 +164,30 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         44
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(index: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        let config: UIContextMenuConfiguration = .init(identifier: indexPath as NSIndexPath) {
+            return self.viewModel.previewDetails(index: indexPath.row)
+        } actionProvider: { items in
+            let menu = UIMenu(title: "", children: [])
+            
+            return menu
+        }
+        
+        return config
+    }
+
+    func tableView(_ tableView: UITableView, willPerformPreviewActionForMenuWith configuration: UIContextMenuConfiguration, animator: UIContextMenuInteractionCommitAnimating) {
+        guard let vc = animator.previewViewController else { return }
+        
+        animator.addCompletion {
+            self.viewModel.pushDetailsViewController(vc: vc)
+        }
+    }
+    
 }

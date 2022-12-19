@@ -28,9 +28,10 @@ class RecetteDetailsViewCell: UITableViewCell {
     lazy var noteSView: UIStackView = {
         let view: UIStackView = .init()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.spacing = 2
         view.alignment = .center
         view.axis = .horizontal
-        view.distribution = .fillEqually
+        view.distribution = .fill
         return view
     }()
     
@@ -44,7 +45,7 @@ class RecetteDetailsViewCell: UITableViewCell {
         let starImageView: UIImageView = .init(image: .init(systemName: "star.fill"))
         starImageView.tintColor = .systemYellow
         starImageView.translatesAutoresizingMaskIntoConstraints = false
-        
+        starImageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
         return starImageView
     }
     
@@ -53,7 +54,7 @@ class RecetteDetailsViewCell: UITableViewCell {
     func setup(with data: Recipe) {
         self.content = data
         selectionStyle = .none
-        
+        self.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         // setup image loading
         setUpViews()
         setUpConstraints()
@@ -63,7 +64,7 @@ class RecetteDetailsViewCell: UITableViewCell {
 extension RecetteDetailsViewCell: ViewConstraintAutoLayoutSetup {
     func setUpViews() {
         nameLabel.text = content.name
-        durationLabel.text = "\(content.requiredTime) mn"
+        durationLabel.text = content.requiredTime
         
         setupStarView(count: content.note)
         
@@ -93,7 +94,7 @@ extension RecetteDetailsViewCell: ViewConstraintAutoLayoutSetup {
         nameLabel.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: durationLabel.leadingAnchor)
         
         durationLabel.anchor(top: self.topAnchor, leading: nil, bottom: self.bottomAnchor, trailing: self.trailingAnchor,
-                           padding: .init(top: 2, left: 0, bottom: 2, right: 8))
+                             padding: .init(top: 2, left: 0, bottom: 2, right: 18))
         
         NSLayoutConstraint.activate([
             nameLabel.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.5),
