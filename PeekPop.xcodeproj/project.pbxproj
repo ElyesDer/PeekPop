@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E938CB8E2950504000B40688 /* PeekPopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938CB8D2950504000B40688 /* PeekPopTests.swift */; };
 		E938CB922950507500B40688 /* PeekPopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938CB912950507500B40688 /* PeekPopUITests.swift */; };
+		E938CB95295053AB00B40688 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = E938CB94295053AB00B40688 /* readme.md */; };
 		E93AEE28294FA48500F961A1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE27294FA48500F961A1 /* Recipe.swift */; };
 		E93AEE2A294FA6BB00F961A1 /* RecetteDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE29294FA6BB00F961A1 /* RecetteDetailsViewCell.swift */; };
 		E93AEE2E294FCEDD00F961A1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */; };
@@ -52,6 +53,7 @@
 		E938CB8C2950504000B40688 /* PeekPopTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeekPopTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		E938CB8D2950504000B40688 /* PeekPopTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPopTests.swift; sourceTree = "<group>"; };
 		E938CB912950507500B40688 /* PeekPopUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPopUITests.swift; sourceTree = "<group>"; };
+		E938CB94295053AB00B40688 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		E93AEE27294FA48500F961A1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		E93AEE29294FA6BB00F961A1 /* RecetteDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteDetailsViewCell.swift; sourceTree = "<group>"; };
 		E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 		E9FD778C294F978D00D522C7 = {
 			isa = PBXGroup;
 			children = (
+				E938CB94295053AB00B40688 /* readme.md */,
 				E9FD7797294F978D00D522C7 /* PeekPop */,
 				E9FD77AE294F978F00D522C7 /* PeekPopTests */,
 				E9FD77B8294F978F00D522C7 /* PeekPopUITests */,
@@ -467,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E938CB95295053AB00B40688 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
