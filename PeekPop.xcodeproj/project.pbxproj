@@ -12,6 +12,7 @@
 		E93AEE2E294FCEDD00F961A1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */; };
 		E93AEE32294FCF9400F961A1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */; };
 		E93AEE34294FD02F00F961A1 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE33294FD02F00F961A1 /* DetailCoordinator.swift */; };
+		E93AEE37295027A700F961A1 /* SortImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE36295027A700F961A1 /* SortImpl.m */; };
 		E9FD7799294F978D00D522C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD7798294F978D00D522C7 /* AppDelegate.swift */; };
 		E9FD779B294F978D00D522C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD779A294F978D00D522C7 /* SceneDelegate.swift */; };
 		E9FD779D294F978D00D522C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD779C294F978D00D522C7 /* HomeViewController.swift */; };
@@ -52,6 +53,9 @@
 		E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		E93AEE33294FD02F00F961A1 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		E93AEE35295027A700F961A1 /* PeekPop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeekPop-Bridging-Header.h"; sourceTree = "<group>"; };
+		E93AEE36295027A700F961A1 /* SortImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortImpl.m; sourceTree = "<group>"; };
+		E93AEE3829502AA600F961A1 /* SortImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortImpl.h; sourceTree = "<group>"; };
 		E9FD7795294F978D00D522C7 /* PeekPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FD7798294F978D00D522C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9FD779A294F978D00D522C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				E93AEE26294FA47D00F961A1 /* Models */,
+				E93AEE36295027A700F961A1 /* SortImpl.m */,
+				E93AEE3829502AA600F961A1 /* SortImpl.h */,
+				E93AEE35295027A700F961A1 /* PeekPop-Bridging-Header.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -390,6 +397,7 @@
 				TargetAttributes = {
 					E9FD7794294F978D00D522C7 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					E9FD77AA294F978F00D522C7 = {
 						CreatedOnToolsVersion = 14.2;
@@ -458,6 +466,7 @@
 				E9FD77D9294F9CDB00D522C7 /* AppCoordinator.swift in Sources */,
 				E9FD77D2294F9C3500D522C7 /* Coordinator.swift in Sources */,
 				E9FD77DC294F9E0600D522C7 /* HomeViewModel.swift in Sources */,
+				E93AEE37295027A700F961A1 /* SortImpl.m in Sources */,
 				E9FD779D294F978D00D522C7 /* HomeViewController.swift in Sources */,
 				E93AEE32294FCF9400F961A1 /* DetailsViewModel.swift in Sources */,
 				E93AEE2A294FA6BB00F961A1 /* RecetteDetailsViewCell.swift in Sources */,
@@ -635,6 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75K654T5D3;
@@ -652,6 +662,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.homework.PeekPop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeekPop/Data/PeekPop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -662,6 +674,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75K654T5D3;
@@ -679,6 +692,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.homework.PeekPop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeekPop/Data/PeekPop-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

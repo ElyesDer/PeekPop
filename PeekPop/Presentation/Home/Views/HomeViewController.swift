@@ -96,18 +96,11 @@ class HomeViewController: UIViewController {
             .receive(on: DispatchQueue.main)
             .sink { [weak self] recipes in
                 guard let self = self else { return }
-                var snapshot = self.tableViewDataSource.snapshot()
+                var snapshot = NSDiffableDataSourceSnapshot<Sections, Recipe>()
                 
-                recipes.forEach { recipe in
-                    if let _ = snapshot.indexOfItem(recipe) {
-                        snapshot.reloadItems([recipe])
-                    } else {
-                        snapshot.appendItems([recipe])
-                    }
-                }
-                
-                // apply
-                self.tableViewDataSource.apply(snapshot)
+                snapshot.appendSections([.main])
+                snapshot.appendItems(recipes, toSection: .main)
+                self.tableViewDataSource.apply(snapshot, animatingDifferences: false)
             }
             .store(in: &cancellables)
     }
@@ -175,7 +168,6 @@ extension HomeViewController: UITableViewDelegate {
             return self.viewModel.previewDetails(index: indexPath.row)
         } actionProvider: { items in
             let menu = UIMenu(title: "", children: [])
-            
             return menu
         }
         

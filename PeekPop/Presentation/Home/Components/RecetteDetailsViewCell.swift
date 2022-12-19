@@ -64,7 +64,7 @@ class RecetteDetailsViewCell: UITableViewCell {
 extension RecetteDetailsViewCell: ViewConstraintAutoLayoutSetup {
     func setUpViews() {
         nameLabel.text = content.name
-        durationLabel.text = content.requiredTime
+        durationLabel.text = "\(content.requiredTime) mn"
         
         setupStarView(count: content.note)
         
