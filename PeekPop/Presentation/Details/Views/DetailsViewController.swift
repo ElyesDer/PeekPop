@@ -142,6 +142,7 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController: ViewConstraintAutoLayoutSetup {
     func setUpViews() {
         title = viewModel.title
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0.0)
         scrollView.alwaysBounceVertical = true
         navigationController?.navigationBar.prefersLargeTitles = true
     }
@@ -179,7 +180,7 @@ extension DetailsViewController: ViewConstraintAutoLayoutSetup {
         
         preparationLabel.anchor(top: ingredientDetailsText.bottomAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 8, right: 16))
         
-        preparationDetailsText.anchor(top: preparationLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: 8, left: 16, bottom: 0, right: 16))
+        preparationDetailsText.anchor(top: preparationLabel.bottomAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 8, left: 16, bottom: 70, right: 16))
         
         footerStackView.anchor(top: footerContentView.topAnchor, leading: footerContentView.leadingAnchor, bottom: footerContentView.safeAreaLayoutGuide.bottomAnchor, trailing: footerContentView.trailingAnchor,
                                padding: .init(top: 0, left: 16, bottom: 0, right: 16))
@@ -189,7 +190,7 @@ extension DetailsViewController: ViewConstraintAutoLayoutSetup {
             scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
             scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: footerContentView.topAnchor),
             contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),

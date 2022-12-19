@@ -17,7 +17,7 @@ class HomeViewModel {
     let sorter: ArraySorter = .init()
     
     func randomAddRecipe() {
-        let recipe: Recipe = .init(name: "Random name", requiredTime: Int.random(in: 0...100), note: Int.random(in: 1...3), ingredient: "A big list of ingred", preparation: "How to prepare", imageName: "im_coco")
+        let recipe: Recipe = Mocks.generate()
         
         var _recipes: Recipes = recipes
         _recipes.append(recipe)

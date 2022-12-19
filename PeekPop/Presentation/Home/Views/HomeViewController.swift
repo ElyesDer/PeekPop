@@ -106,14 +106,10 @@ class HomeViewController: UIViewController {
     }
     
     private func configureInitialDiffableSnapshot() {
-        //First we need to init the diffableDataSource
         var snapshot = NSDiffableDataSourceSnapshot<Sections, Recipe>()
-        
-        //Then we append the sections and items
         snapshot.appendSections([.main])
         snapshot.appendItems(viewModel.recipes, toSection: .main)
         
-        //Finally we apply the snapshot on tableViewDataSource
         tableViewDataSource.apply(snapshot, animatingDifferences: false)
     }
 }

@@ -13,6 +13,7 @@
 		E93AEE32294FCF9400F961A1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */; };
 		E93AEE34294FD02F00F961A1 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE33294FD02F00F961A1 /* DetailCoordinator.swift */; };
 		E93AEE37295027A700F961A1 /* SortImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE36295027A700F961A1 /* SortImpl.m */; };
+		E93AEE3B29503E8D00F961A1 /* RecipeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE3A29503E8D00F961A1 /* RecipeMock.swift */; };
 		E9FD7799294F978D00D522C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD7798294F978D00D522C7 /* AppDelegate.swift */; };
 		E9FD779B294F978D00D522C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD779A294F978D00D522C7 /* SceneDelegate.swift */; };
 		E9FD779D294F978D00D522C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD779C294F978D00D522C7 /* HomeViewController.swift */; };
@@ -56,6 +57,7 @@
 		E93AEE35295027A700F961A1 /* PeekPop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeekPop-Bridging-Header.h"; sourceTree = "<group>"; };
 		E93AEE36295027A700F961A1 /* SortImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortImpl.m; sourceTree = "<group>"; };
 		E93AEE3829502AA600F961A1 /* SortImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortImpl.h; sourceTree = "<group>"; };
+		E93AEE3A29503E8D00F961A1 /* RecipeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMock.swift; sourceTree = "<group>"; };
 		E9FD7795294F978D00D522C7 /* PeekPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FD7798294F978D00D522C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9FD779A294F978D00D522C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		E93AEE25294FA46000F961A1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				E93AEE3929503E7900F961A1 /* Mocks */,
 				E93AEE26294FA47D00F961A1 /* Models */,
 				E93AEE36295027A700F961A1 /* SortImpl.m */,
 				E93AEE3829502AA600F961A1 /* SortImpl.h */,
@@ -153,6 +156,14 @@
 				E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E93AEE3929503E7900F961A1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE3A29503E8D00F961A1 /* RecipeMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		E9FD778C294F978D00D522C7 = {
@@ -476,6 +487,7 @@
 				E9FD77E2294FA1CB00D522C7 /* UIView+AutoLayout.swift in Sources */,
 				E9FD77E5294FA20800D522C7 /* ViewConstrainsAutoLayout.swift in Sources */,
 				E9FD7799294F978D00D522C7 /* AppDelegate.swift in Sources */,
+				E93AEE3B29503E8D00F961A1 /* RecipeMock.swift in Sources */,
 				E9FD779B294F978D00D522C7 /* SceneDelegate.swift in Sources */,
 				E93AEE2E294FCEDD00F961A1 /* DetailsViewController.swift in Sources */,
 			);
