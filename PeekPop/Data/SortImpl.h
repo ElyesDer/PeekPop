@@ -5,10 +5,11 @@
 //  Created by Derouiche Elyes on 19/12/2022.
 //
 #import <Foundation/Foundation.h>
-#import "PeekPop-Swift.h"
 
 #ifndef SortImpl_h
 #define SortImpl_h
+
+@class Recipe;
 
 @interface ArraySorter: NSObject
 
