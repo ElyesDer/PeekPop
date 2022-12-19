@@ -7,19 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E938CB8E2950504000B40688 /* PeekPopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938CB8D2950504000B40688 /* PeekPopTests.swift */; };
+		E938CB922950507500B40688 /* PeekPopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938CB912950507500B40688 /* PeekPopUITests.swift */; };
+		E93AEE28294FA48500F961A1 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE27294FA48500F961A1 /* Recipe.swift */; };
+		E93AEE2A294FA6BB00F961A1 /* RecetteDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE29294FA6BB00F961A1 /* RecetteDetailsViewCell.swift */; };
+		E93AEE2E294FCEDD00F961A1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */; };
+		E93AEE32294FCF9400F961A1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */; };
+		E93AEE34294FD02F00F961A1 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE33294FD02F00F961A1 /* DetailCoordinator.swift */; };
+		E93AEE37295027A700F961A1 /* SortImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE36295027A700F961A1 /* SortImpl.m */; };
+		E93AEE3B29503E8D00F961A1 /* RecipeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AEE3A29503E8D00F961A1 /* RecipeMock.swift */; };
 		E9FD7799294F978D00D522C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD7798294F978D00D522C7 /* AppDelegate.swift */; };
 		E9FD779B294F978D00D522C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD779A294F978D00D522C7 /* SceneDelegate.swift */; };
 		E9FD779D294F978D00D522C7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD779C294F978D00D522C7 /* HomeViewController.swift */; };
 		E9FD77A2294F978F00D522C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9FD77A1294F978F00D522C7 /* Assets.xcassets */; };
 		E9FD77A5294F978F00D522C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9FD77A3294F978F00D522C7 /* LaunchScreen.storyboard */; };
-		E9FD77B0294F978F00D522C7 /* PeekPopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77AF294F978F00D522C7 /* PeekPopTests.swift */; };
-		E9FD77BA294F978F00D522C7 /* PeekPopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77B9294F978F00D522C7 /* PeekPopUITests.swift */; };
 		E9FD77BC294F978F00D522C7 /* PeekPopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77BB294F978F00D522C7 /* PeekPopUITestsLaunchTests.swift */; };
 		E9FD77CD294F986400D522C7 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = E9FD77CC294F986400D522C7 /* Inject */; };
 		E9FD77D2294F9C3500D522C7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77D1294F9C3500D522C7 /* Coordinator.swift */; };
 		E9FD77D6294F9CB100D522C7 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77D5294F9CB100D522C7 /* HomeCoordinator.swift */; };
 		E9FD77D9294F9CDB00D522C7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77D8294F9CDB00D522C7 /* AppCoordinator.swift */; };
 		E9FD77DC294F9E0600D522C7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77DB294F9E0600D522C7 /* HomeViewModel.swift */; };
+		E9FD77E2294FA1CB00D522C7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77E1294FA1CB00D522C7 /* UIView+AutoLayout.swift */; };
+		E9FD77E5294FA20800D522C7 /* ViewConstrainsAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FD77E4294FA20800D522C7 /* ViewConstrainsAutoLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +49,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E938CB8C2950504000B40688 /* PeekPopTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeekPopTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		E938CB8D2950504000B40688 /* PeekPopTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPopTests.swift; sourceTree = "<group>"; };
+		E938CB912950507500B40688 /* PeekPopUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeekPopUITests.swift; sourceTree = "<group>"; };
+		E93AEE27294FA48500F961A1 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		E93AEE29294FA6BB00F961A1 /* RecetteDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteDetailsViewCell.swift; sourceTree = "<group>"; };
+		E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		E93AEE33294FD02F00F961A1 /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		E93AEE35295027A700F961A1 /* PeekPop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeekPop-Bridging-Header.h"; sourceTree = "<group>"; };
+		E93AEE36295027A700F961A1 /* SortImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SortImpl.m; sourceTree = "<group>"; };
+		E93AEE3829502AA600F961A1 /* SortImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SortImpl.h; sourceTree = "<group>"; };
+		E93AEE3A29503E8D00F961A1 /* RecipeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMock.swift; sourceTree = "<group>"; };
 		E9FD7795294F978D00D522C7 /* PeekPop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeekPop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9FD7798294F978D00D522C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9FD779A294F978D00D522C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,14 +69,14 @@
 		E9FD77A4294F978F00D522C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9FD77A6294F978F00D522C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9FD77AB294F978F00D522C7 /* PeekPopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeekPopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9FD77AF294F978F00D522C7 /* PeekPopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekPopTests.swift; sourceTree = "<group>"; };
 		E9FD77B5294F978F00D522C7 /* PeekPopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeekPopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9FD77B9294F978F00D522C7 /* PeekPopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekPopUITests.swift; sourceTree = "<group>"; };
 		E9FD77BB294F978F00D522C7 /* PeekPopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeekPopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E9FD77D1294F9C3500D522C7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		E9FD77D5294F9CB100D522C7 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		E9FD77D8294F9CDB00D522C7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E9FD77DB294F9E0600D522C7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		E9FD77E1294FA1CB00D522C7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		E9FD77E4294FA20800D522C7 /* ViewConstrainsAutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstrainsAutoLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +105,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E93AEE25294FA46000F961A1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE3929503E7900F961A1 /* Mocks */,
+				E93AEE26294FA47D00F961A1 /* Models */,
+				E93AEE36295027A700F961A1 /* SortImpl.m */,
+				E93AEE3829502AA600F961A1 /* SortImpl.h */,
+				E93AEE35295027A700F961A1 /* PeekPop-Bridging-Header.h */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E93AEE26294FA47D00F961A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE27294FA48500F961A1 /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E93AEE2B294FCEA200F961A1 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE30294FCEF900F961A1 /* ViewModel */,
+				E93AEE2F294FCEF000F961A1 /* Coodinator */,
+				E93AEE2C294FCEBF00F961A1 /* Views */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		E93AEE2C294FCEBF00F961A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE2D294FCEDD00F961A1 /* DetailsViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E93AEE2F294FCEF000F961A1 /* Coodinator */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE33294FD02F00F961A1 /* DetailCoordinator.swift */,
+			);
+			path = Coodinator;
+			sourceTree = "<group>";
+		};
+		E93AEE30294FCEF900F961A1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE31294FCF9400F961A1 /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E93AEE3929503E7900F961A1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE3A29503E8D00F961A1 /* RecipeMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		E9FD778C294F978D00D522C7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +190,7 @@
 		E9FD7797294F978D00D522C7 /* PeekPop */ = {
 			isa = PBXGroup;
 			children = (
+				E93AEE25294FA46000F961A1 /* Data */,
 				E9FD77CF294F9C0500D522C7 /* Shared */,
 				E9FD77CA294F980600D522C7 /* Presentation */,
 				E9FD77C8294F97D600D522C7 /* Application */,
@@ -119,7 +203,8 @@
 		E9FD77AE294F978F00D522C7 /* PeekPopTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9FD77AF294F978F00D522C7 /* PeekPopTests.swift */,
+				E938CB8D2950504000B40688 /* PeekPopTests.swift */,
+				E938CB8C2950504000B40688 /* PeekPopTests-Bridging-Header.h */,
 			);
 			path = PeekPopTests;
 			sourceTree = "<group>";
@@ -127,7 +212,7 @@
 		E9FD77B8294F978F00D522C7 /* PeekPopUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E9FD77B9294F978F00D522C7 /* PeekPopUITests.swift */,
+				E938CB912950507500B40688 /* PeekPopUITests.swift */,
 				E9FD77BB294F978F00D522C7 /* PeekPopUITestsLaunchTests.swift */,
 			);
 			path = PeekPopUITests;
@@ -155,6 +240,8 @@
 		E9FD77CA294F980600D522C7 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E9FD77DF294FA1B500D522C7 /* Shared */,
+				E93AEE2B294FCEA200F961A1 /* Details */,
 				E9FD77D3294F9C8C00D522C7 /* Home */,
 			);
 			path = Presentation;
@@ -187,19 +274,20 @@
 		E9FD77D3294F9C8C00D522C7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E9FD77DE294FA18200D522C7 /* Components */,
 				E9FD77DA294F9DFA00D522C7 /* ViewModel */,
-				E9FD77D4294F9C9500D522C7 /* Protocols */,
+				E9FD77D4294F9C9500D522C7 /* Coordinator */,
 				E9FD77CE294F9A2400D522C7 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		E9FD77D4294F9C9500D522C7 /* Protocols */ = {
+		E9FD77D4294F9C9500D522C7 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				E9FD77D5294F9CB100D522C7 /* HomeCoordinator.swift */,
 			);
-			path = Protocols;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		E9FD77DA294F9DFA00D522C7 /* ViewModel */ = {
@@ -216,6 +304,39 @@
 				E9FD77D8294F9CDB00D522C7 /* AppCoordinator.swift */,
 			);
 			path = Coodinator;
+			sourceTree = "<group>";
+		};
+		E9FD77DE294FA18200D522C7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E93AEE29294FA6BB00F961A1 /* RecetteDetailsViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E9FD77DF294FA1B500D522C7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD77E3294FA1F200D522C7 /* Protocols */,
+				E9FD77E0294FA1BE00D522C7 /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E9FD77E0294FA1BE00D522C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD77E1294FA1CB00D522C7 /* UIView+AutoLayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E9FD77E3294FA1F200D522C7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E9FD77E4294FA20800D522C7 /* ViewConstrainsAutoLayout.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +410,11 @@
 				TargetAttributes = {
 					E9FD7794294F978D00D522C7 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					E9FD77AA294F978F00D522C7 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = E9FD7794294F978D00D522C7;
 					};
 					E9FD77B4294F978F00D522C7 = {
@@ -357,10 +480,19 @@
 				E9FD77D9294F9CDB00D522C7 /* AppCoordinator.swift in Sources */,
 				E9FD77D2294F9C3500D522C7 /* Coordinator.swift in Sources */,
 				E9FD77DC294F9E0600D522C7 /* HomeViewModel.swift in Sources */,
+				E93AEE37295027A700F961A1 /* SortImpl.m in Sources */,
 				E9FD779D294F978D00D522C7 /* HomeViewController.swift in Sources */,
+				E93AEE32294FCF9400F961A1 /* DetailsViewModel.swift in Sources */,
+				E93AEE2A294FA6BB00F961A1 /* RecetteDetailsViewCell.swift in Sources */,
+				E93AEE28294FA48500F961A1 /* Recipe.swift in Sources */,
+				E93AEE34294FD02F00F961A1 /* DetailCoordinator.swift in Sources */,
 				E9FD77D6294F9CB100D522C7 /* HomeCoordinator.swift in Sources */,
+				E9FD77E2294FA1CB00D522C7 /* UIView+AutoLayout.swift in Sources */,
+				E9FD77E5294FA20800D522C7 /* ViewConstrainsAutoLayout.swift in Sources */,
 				E9FD7799294F978D00D522C7 /* AppDelegate.swift in Sources */,
+				E93AEE3B29503E8D00F961A1 /* RecipeMock.swift in Sources */,
 				E9FD779B294F978D00D522C7 /* SceneDelegate.swift in Sources */,
+				E93AEE2E294FCEDD00F961A1 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +500,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9FD77B0294F978F00D522C7 /* PeekPopTests.swift in Sources */,
+				E938CB8E2950504000B40688 /* PeekPopTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9FD77BA294F978F00D522C7 /* PeekPopUITests.swift in Sources */,
+				E938CB922950507500B40688 /* PeekPopUITests.swift in Sources */,
 				E9FD77BC294F978F00D522C7 /* PeekPopUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +574,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -458,6 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/PeekPop/Data/Models\"";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -502,6 +636,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -527,6 +662,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75K654T5D3;
@@ -544,6 +680,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.homework.PeekPop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeekPop/Data/PeekPop-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -554,6 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75K654T5D3;
@@ -571,6 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.homework.PeekPop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeekPop/Data/PeekPop-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -581,15 +721,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75K654T5D3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.homework.PeekPopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeekPopTests/PeekPopTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeekPop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeekPop";
@@ -601,15 +749,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 75K654T5D3;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.homework.PeekPopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "PeekPopTests/PeekPopTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeekPop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PeekPop";

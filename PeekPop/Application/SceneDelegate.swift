@@ -21,6 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let navigationController = UINavigationController()
+        navigationController.view.backgroundColor = .systemBackground
+        navigationController.navigationItem.largeTitleDisplayMode = .always
         appCoordinator = AppCoordinator(navigationController: navigationController)
         appCoordinator!.start()
         
